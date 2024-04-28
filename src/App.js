@@ -1,25 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import BlankPage from './BlankPage';
+import CreateUserForm from './CreateUserForm';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import PurchaseOrder from './PurchaseOrder';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/create-user" element={<CreateUserForm/>}></Route>
+        <Route path="/" element={<BlankPage/>} />
+        <Route path="/purchase-order" element={<PurchaseOrder/>} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
