@@ -30,8 +30,7 @@ const CreateUserForm = () => {
         e.preventDefault();
         // Your form submission logic goes here
         console.log(user);
-        debugger;
-        const response = await fetch('http://localhost:8003/actor/member/add', {
+        const response = await fetch('http://localhost:8033/actor/member/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

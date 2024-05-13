@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+span.Resizer.vertical {
+  background: #000;
+  width: 5px;
+  cursor: col-resize;
+  z-index: 1;
+  opacity: .2;
+}
+
+

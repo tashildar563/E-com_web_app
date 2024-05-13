@@ -18,7 +18,7 @@ const BlankPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8003/actor/login', {   
+        const response = await fetch('http://localhost:8033/actor/login', {   
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ const BlankPage = () => {
         console.log(response);
 
         if (response.ok) {
-            navigate('/purchase-order');
+            navigate('/landing-page');
         }else{
             alert('Failed to login');
         }   
