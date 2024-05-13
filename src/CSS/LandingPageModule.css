@@ -19,6 +19,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     height: 7vh;
+    width: 100vh;
     background-color: '#ffbb00';
     align-items: 'center';
     border: 1px solid black;
@@ -48,6 +49,18 @@
     width: 20%;
     height: 40%;
 
+}
+.menu-row.btn {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 
