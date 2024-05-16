@@ -18,7 +18,7 @@ const BlankPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8033/actor/login', {   
+        const response = await fetch('http://localhost:8033/actor/member/login', {   
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
