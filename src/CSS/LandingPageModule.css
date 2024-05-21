@@ -20,47 +20,50 @@ h1 {
 .button_70 {
     display: flex;
     margin-left: 70%;
-    background-color: #D3C5E5;
     width: 10vh;
     height: 4vh;
     top: 2vh;
     left: 2vh;
     border: none;
     border-radius: 5px;
-    color: white;
     font-size: 1.5vh;
     font-weight: bold;
-    position: absolute;    
+    position: absolute; 
+    box-shadow: 3px 3px 10px 0px #edeaea; 
+    border: 1px solid #919494;
+    background-color: #ffffff;  
 }
 .button_80 {
     display: flex;
     margin-left: 80%;
-    background-color: #D3C5E5;
     width: 10vh;
     height: 4vh;
     top: 2vh;
     left: 2vh;
     border: none;
     border-radius: 5px;
-    color: white;
     font-size: 1.5vh;
     font-weight: bold;
-    position: absolute;    
+    position: absolute; 
+    box-shadow: 3px 3px 10px 0px #edeaea; 
+    border: 1px solid #919494; 
+    background-color: #ffffff; 
 }
 .button_90 {
     display: flex;
     margin-left: 90%;
-    background-color: #D3C5E5;
     width: 10vh;
     height: 4vh;
     top: 2vh;
     left: 2vh;
     border: none;
     border-radius: 5px;
-    color: white;
     font-size: 1.5vh;
     font-weight: bold;
-    position: absolute;    
+    position: absolute; 
+    box-shadow: 3px 3px 10px 0px #edeaea; 
+    border: 1px solid #919494;
+    background-color: #ffffff;  
 }
 
 .inner-row {
@@ -126,7 +129,7 @@ p {
     transform: translate3d(0, 0, 0);
   }
   
-  .ripple:after {
+  .card-container:after {
     content: "";
     display: block;
     position: absolute;
@@ -140,11 +143,42 @@ p {
     background-position: 50%;
     transform: scale(10, 10);
     opacity: 0;
-    transition: transform 0.5s, opacity 1s;
+    transition: transform 0.3s, opacity 1s;
   }
   
-  .ripple:active:after {
+  .card-container:active:after {
     transform: scale(0, 0);
     opacity: 0.2;
-    transition: 0s;
+    transition: os;
   }
+.card-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding:5px;
+    /* border: 1px solid #66A5AD; */
+    border-radius:10px;
+    min-height: auto;
+    max-height:20vh ;
+    min-width: 17rem;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 3px 3px 10px 0px #edeaea;
+}
+.card-button{
+    display: flex;
+    margin-bottom: 0%;
+    justify-content: center;
+    background-color: #ffffff;
+    width: 10vh;
+    height: 4vh;
+    border: 1px solid #919494;
+    border-radius: 10px;
+    font-size: 1.5vh;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px 0px #edeaea;
+}
