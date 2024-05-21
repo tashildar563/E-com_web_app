@@ -4,16 +4,20 @@ import { get, post } from './Component/ApiUtility.js';
 import logoImg from './logo192.png';
 import { useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import CardComponent from './Component/CardComponent';
 
 
 
 const LandingPage = () => {
     const [columnNames, setColumnNames] = useState([]);
+    const navigate = useNavigate();
 
     const handleClick = () => {
         console.log('clicked');
     }
-
+    const handleBuyClick = () => {
+        // Your buy logic here
+    };
 
     useEffect(() => {
         // Function to fetch image details from the database
@@ -40,28 +44,22 @@ const LandingPage = () => {
     }, []);
     // const columnNames = ['Sari 1', 'Sari 2', 'Sari 3', 'Sari 4', 'Sari 5', 'Sari 6','Sari 7', 'Sari 8', 'Sari 9', 'Sari 10', 'Sari 11', 'Sari 12','Sari 13'];
 
+    const handleLogInClick = () => {
+        navigate('/');
+    };
+
     return (
-        <div >
-            <header> <h1>Tashildar</h1></header>
-            <button className="button_70" title="Home" >Home</button>
-            <button className="button_80" title="Home" >Home</button>
-            <button className="button_90" title="Home" >Home</button>
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                <header> <h1>Tashildar</h1></header>
+                <button className="button_70" title="Log In" onClick={handleLogInClick}>Log In</button>
+                <button className="button_80" title="Home" >Home</button>
+                <button className="button_90" title="Contact Us" >Contact Us</button>
+            </div>
 
             <div className="main-area">
-                <div className="grid-row" style={{ backgroundColor: '#66A5AD', display: 'flex' }}>
-                    {columnNames.map((item, index) => (
-                        <div key={index} style={{ display: 'flex', justifyContent: 'space-between', minHeight: "10vh", maxHeight: "20vh",maxWidth:"33.33%" }}>
-                            <div className="ripple" style={{ paddingLeft: '1em', margin: '1em 0' }} onClick={handleClick()}>
-                                <p style={{ margin: 0, fontWeight: 'bold' }}>{item.name}</p>
-                                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                                    <p >Size:{item.size}</p>
-                                    <p style={{ margin: '0 1em' }}>Color:{item.color}</p>
-                                    <p style={{ margin: '0 1em' }}>Category:{item.category_id}</p>
-                                </div>
-                            </div>
-                            <img src={logoImg} alt={"logo"} />
-                        </div>
-                    ))}
+                <div className="grid-row" style={{ backgroundColor: '#ffffff', display: 'flex', flexDirection: "row", justifyContent: "space-between" }}>
+                    {columnNames.map((item, index) => <CardComponent key={index} item={item} />)}
                 </div>
             </div>
         </div>
